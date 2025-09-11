@@ -1,0 +1,11 @@
+code,display,definition,category,subcategory,system_name,severity
+PRAM001,Prameha,A condition characterized by excessive urination and thirst,Metabolic Disorders,Diabetes-related,Ayurveda,Moderate
+JWARA001,Jwara,Fever or elevated body temperature,Infectious Diseases,Fever,Ayurveda,Mild
+KASA001,Kasa,Cough or respiratory condition,Respiratory Disorders,Cough,Ayurveda,Mild
+ATISARA001,Atisara,Loose motions or diarrhea,Gastrointestinal Disorders,Diarrhea,Ayurveda,Moderate
+SHIRAHSHOOL001,Shirahshool,Headache or cephalic pain,Neurological Disorders,Headache,Ayurveda,Mild
+HRIDROGA001,Hridroga,Heart disease or cardiac conditions,Cardiovascular Disorders,Heart Disease,Ayurveda,Severe
+MADHUMEHA001,Madhumeha,Diabetes mellitus in Ayurvedic terminology,Metabolic Disorders,Diabetes,Ayurveda,Severe
+AMLAPITTA001,Amlapitta,Hyperacidity or gastritis,Gastrointestinal Disorders,Acidity,Ayurveda,Mild
+SANDHIVATA001,Sandhivata,Joint disorders or arthritis,Musculoskeletal Disorders,Arthritis,Ayurveda,Moderate
+YAKRIDVIKARA001,Yakridvikara,Liver disorders or hepatic conditions,Hepatic Disorders,Liver Disease,Ayurveda,Severe
