@@ -6,6 +6,7 @@ mappings, users, and audit logs using SQLAlchemy.
 """
 
 import os
+import sys
 from datetime import datetime
 from typing import List, Optional, Dict, Any
 import json
@@ -19,7 +20,10 @@ from sqlalchemy.orm import sessionmaker, relationship, Session
 from sqlalchemy.dialects.sqlite import JSON as SQLiteJSON
 
 # Database configuration
-DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///./data/fhir_mapping.db")
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DATA_DIR = os.path.join(os.path.dirname(BASE_DIR), "data")
+os.makedirs(DATA_DIR, exist_ok=True)
+DATABASE_URL = os.getenv("DATABASE_URL", f"sqlite:///{os.path.join(DATA_DIR, 'fhir_mapping.db')}")
 engine = create_engine(DATABASE_URL, echo=os.getenv("DATABASE_ECHO", "false").lower() == "true")
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base()
@@ -190,8 +194,6 @@ def init_db():
     try:
         admin_user = db.query(User).filter(User.username == "admin").first()
         if not admin_user:
-            import sys
-            import os
             sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
             from auth import get_password_hash
             admin_user = User(
